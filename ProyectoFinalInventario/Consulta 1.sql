@@ -1,4 +1,5 @@
 use inventario;
-select ID,Sueldo 
+select nombres, direccion, ID
 from empleado
-where Sueldo >=2200;
+inner join persona on empleado.personaID = persona.CI and sueldo >= 2200;
+select avg(sueldo) from empleado where sueldo = 2200;
